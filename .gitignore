@@ -3,4 +3,4 @@
 app/etc/local.xml
 var/cache/
 var/session/
-
+app/etc/
