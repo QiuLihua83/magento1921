@@ -1,6 +1,5 @@
 .project
 .buildpath
-app/etc/local.xml
-var/cache/
-var/session/
+var/
 app/etc/
+downloader/
