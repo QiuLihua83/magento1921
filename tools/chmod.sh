@@ -1,7 +1,17 @@
 #!/bin/bash
+
 ROOT='../'
-sudo find ${ROOT} -type f -exec chmod 644 {} \;
-sudo find ${ROOT} -type d -exec chmod 777 {} \;
-sudo chmod o+w ${ROOT}/var/.htaccess
-sudo chmod 550 ${ROOT}/mage
-sudo chmod +x  ${ROOT}/tools/chmod.sh
+
+cd ${ROOT}
+echo "pwd:"
+pwd
+
+sudo find ./ -type f -exec chmod 644 {} \;
+sudo find ./ -type d -exec chmod 777 {} \;
+sudo find var/package -type f -exec chmod 766 {} \;
+sudo find media -type f -exec chmod 766 {} \;
+sudo chmod o+w var/.htaccess
+sudo chmod 550 mage
+sudo chmod +x  cron.sh
+sudo chmod +x  tools/chmod.sh
+sudo chmod +x  tools/install.sh
